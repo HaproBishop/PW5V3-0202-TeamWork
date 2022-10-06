@@ -4,7 +4,7 @@ using System;
 namespace UnitTestAlternationV3
 {
     [TestClass]
-    public class UnitTests
+    public class UnitTests//Test our library
     {
         [TestMethod]
         public void TestLibrary()
