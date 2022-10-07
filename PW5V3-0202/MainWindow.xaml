@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PW5V3_0202"
         mc:Ignorable="d"
-        Title="MainWindow" Height="647.204" Width="800">
+        Title="Чередование в массивах" Height="647.204" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="97*"/>
@@ -23,6 +23,10 @@
         <Button Margin="309,126,358,29" Grid.Row="4" Content="Создать и заполнить" Click="CreateFill_Click"></Button>
         <Label Margin="10,125,632,30" Grid.Row="4" Content="Размер массивов" FontSize="16"></Label>
         <Button Margin="439,126,278,29" Grid.Row="4" Content="Рассчитать"/>
-        <TextBox x:Name="size_Copy" Margin="533,125,30,30" Grid.Row="4"/>
+        <GroupBox Header="Чередующиеся массивы" Grid.Row="4" Margin="519,109,0,29">
+            <StackPanel>
+                <TextBox x:Name="Result" Grid.Row="4"/>
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </Window>
