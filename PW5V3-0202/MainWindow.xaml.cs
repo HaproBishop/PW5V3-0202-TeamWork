@@ -25,15 +25,16 @@ namespace PW5V3_0202
         {
             InitializeComponent();
         }
-        int[] array1, array2, array3, array4, array5;
+        double[] array1, array2, array3, array4, array5;
+        List<int> resultNumbers;
         private void CreateFill_Click(object sender, RoutedEventArgs e)//Добавить взаимодействие с классом AlternationV3 для нахождения чередования
         {
             int sizeArrays = Convert.ToInt32(size.Text);
-            array1 = new int[sizeArrays];
-            array2 = new int[sizeArrays];
-            array3 = new int[sizeArrays];
-            array4 = new int[sizeArrays];
-            array5 = new int[sizeArrays];
+            array1 = new double[sizeArrays];
+            array2 = new double[sizeArrays];
+            array3 = new double[sizeArrays];
+            array4 = new double[sizeArrays];
+            array5 = new double[sizeArrays];
             Random rnd = new Random();
             for (int i = 0; i < sizeArrays; i++)
             {
@@ -49,6 +50,11 @@ namespace PW5V3_0202
             DataGrid3.ItemsSource = VisualArray.ToDataTable(array3).DefaultView;
             DataGrid4.ItemsSource = VisualArray.ToDataTable(array4).DefaultView;
             DataGrid5.ItemsSource = VisualArray.ToDataTable(array5).DefaultView;
+            resultNumbers = new List<int>();
+            if (AlternationV3.ElementAlternationCheck(array1))
+            {
+                resultNumbers.Add(1);//Заменить цифру на порядковый номер массива
+            }
         }
     }
 }
