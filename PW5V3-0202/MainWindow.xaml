@@ -22,7 +22,7 @@
         <TextBox x:Name="size" Margin="181,126,501,29" Grid.Row="4"></TextBox>
         <Button Margin="309,126,358,29" Grid.Row="4" Content="Создать и заполнить" Click="CreateFill_Click"></Button>
         <Label Margin="10,125,632,30" Grid.Row="4" Content="Размер массивов" FontSize="16"></Label>
-        <Button Margin="439,126,278,29" Grid.Row="4" Content="Рассчитать"/>
+        <Button Margin="439,126,278,29" Grid.Row="4" Content="Рассчитать" Click="Calculate_Click"/>
         <GroupBox Header="Чередующиеся массивы" Grid.Row="4" Margin="519,109,0,29">
             <StackPanel>
                 <TextBox x:Name="Result" Grid.Row="4"/>

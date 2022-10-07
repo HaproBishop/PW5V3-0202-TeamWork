@@ -29,6 +29,7 @@ namespace PW5V3_0202
         List<int> resultNumbers;
         private void CreateFill_Click(object sender, RoutedEventArgs e)//Добавить взаимодействие с классом AlternationV3 для нахождения чередования
         {
+            Result.Clear();
             int sizeArrays = Convert.ToInt32(size.Text);
             array1 = new double[sizeArrays];
             array2 = new double[sizeArrays];
@@ -55,6 +56,30 @@ namespace PW5V3_0202
             {
                 resultNumbers.Add(1);//Заменить цифру на порядковый номер массива
             }
+            if (AlternationV3.ElementAlternationCheck(array2))
+            {
+                resultNumbers.Add(2);//Заменить цифру на порядковый номер массива
+            }
+            if (AlternationV3.ElementAlternationCheck(array3))
+            {
+                resultNumbers.Add(3);//Заменить цифру на порядковый номер массива
+            }
+            if (AlternationV3.ElementAlternationCheck(array4))
+            {
+                resultNumbers.Add(4);//Заменить цифру на порядковый номер массива
+            }
+            if (AlternationV3.ElementAlternationCheck(array5))
+            {
+                resultNumbers.Add(5);//Заменить цифру на порядковый номер массива
+            }
+        }
+        private void Calculate_Click(object sender, RoutedEventArgs e)
+        {
+            for(int i=0; i<resultNumbers.Count;i++)
+            {
+                Result.Text += resultNumbers[i].ToString() + ";";
+            }
+            if (Result.Text == "") Result.Text = "Таких массивов нет";
         }
     }
 }
