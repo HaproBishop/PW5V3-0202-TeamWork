@@ -24,5 +24,29 @@ namespace PW5V3_0202
         {
             InitializeComponent();
         }
+        int[] array1, array2, array3, array4, array5;
+        private void CreateFill_Click(object sender, RoutedEventArgs e)
+        {
+            int sizeArrays = Convert.ToInt32(size.Text);
+            array1 = new int[sizeArrays];
+            array2 = new int[sizeArrays];
+            array3 = new int[sizeArrays];
+            array4 = new int[sizeArrays];
+            array5 = new int[sizeArrays];
+            Random rnd = new Random();
+            for (int i = 0; i < sizeArrays; i++)
+            {
+                array1[i] = rnd.Next(-50, 50);
+                array2[i] = rnd.Next(-50, 50);
+                array3[i] = rnd.Next(-50, 50);
+                array4[i] = rnd.Next(-50, 50);
+                array5[i] = rnd.Next(-50, 50);
+            }
+            DataGrid1.ItemsSource = VisualArray.ToDataTable(array1).DefaultView;
+            DataGrid2.ItemsSource = VisualArray.ToDataTable(array2).DefaultView;
+            DataGrid3.ItemsSource = VisualArray.ToDataTable(array3).DefaultView;
+            DataGrid4.ItemsSource = VisualArray.ToDataTable(array4).DefaultView;
+            DataGrid5.ItemsSource = VisualArray.ToDataTable(array5).DefaultView;
+        }
     }
 }
