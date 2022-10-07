@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlternationV3-Array\AlternationV3-Array.csproj">
+      <Project>{223519ea-cadd-4d50-a162-32f74b20ec37}</Project>
+      <Name>AlternationV3-Array</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

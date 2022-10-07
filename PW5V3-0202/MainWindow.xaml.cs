@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AlternationV3_Array;
 
 namespace PW5V3_0202
 {
@@ -25,7 +26,7 @@ namespace PW5V3_0202
             InitializeComponent();
         }
         int[] array1, array2, array3, array4, array5;
-        private void CreateFill_Click(object sender, RoutedEventArgs e)
+        private void CreateFill_Click(object sender, RoutedEventArgs e)//Добавить взаимодействие с классом AlternationV3 для нахождения чередования
         {
             int sizeArrays = Convert.ToInt32(size.Text);
             array1 = new int[sizeArrays];
@@ -42,6 +43,7 @@ namespace PW5V3_0202
                 array4[i] = rnd.Next(-50, 50);
                 array5[i] = rnd.Next(-50, 50);
             }
+            //Добавить сюда проверку массивов wrote by HB :3
             DataGrid1.ItemsSource = VisualArray.ToDataTable(array1).DefaultView;
             DataGrid2.ItemsSource = VisualArray.ToDataTable(array2).DefaultView;
             DataGrid3.ItemsSource = VisualArray.ToDataTable(array3).DefaultView;
